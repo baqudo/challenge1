@@ -1,0 +1,33 @@
+- var svgSprite = 'img/sprite.svg'
+
+mixin icon(name, modClass)
+  if modClass == undefined
+    - var modClass = ''
+  else
+    - var modClass = ' ' + modClass
+  svg(class=name + modClass)
+    use(xlink:href= svgSprite + '#icon-' + name)
+
+mixin block-news(data = {})
+  -
+    let {
+      className = '',
+      img = '',
+      title = '',
+      date = '',
+      type = '',
+      info = '',
+      link = '#',
+      more = '',
+    } = data;
+
+  .block-news.js-more-parent(class=className)
+    a.block-news__img(href=link, title=title, style=`background-image: url(../img/${img})`)
+    .block-news__title!= title
+    .block-news__row
+      .block-news__date!= date
+      .block-news__type!= type
+    .block-news__info
+      p!= info
+      p.block-news__more.js-more-text!= more
+    a.block-news__link.js-more-btn(href=link, title=title) read more

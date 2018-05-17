@@ -1,0 +1,51 @@
+.out
+	padding-bottom: 200px
+.latest-news
+	&__head
+		+container()
+		display: flex
+		justify-content: space-between
+		align-items: flex-end
+		margin-bottom: 100px
+	&__title
+		font-size: 60px
+		font-weight: bold
+		color: $darkblue
+	&__arrows
+		.slick-prev, .slick-next
+			background-color: transparent
+			width: 50px
+			height: 30px
+			display: inline-block
+			background-repeat: no-repeat
+			background-size: contain
+			background-position: 50% 50%
+		.slick-prev
+			background-image: url(../img/48px-tail-left.svg)
+		.slick-next
+			background-image: url(../img/48px-tail-right.svg)
+.slider
+	&__item
+
+		margin-right: 130px
+.row
+	display: flex
+	justify-content: space-between
+.col-left
+	width: 260px
+	margin-right: auto
+.col-right
+	width: 780px
+	margin-left: auto
+h2
+	font-size: 48px
+	margin-bottom: 0.5em
+	color: $darkblue
+.text
+	color: #7c8092
+
+.video
+	margin: 70px 0
+
+.content
+	margin-bottom: 100px

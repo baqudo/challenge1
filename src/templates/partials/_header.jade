@@ -1,0 +1,22 @@
+//BEGIN header
+header.header
+  .header__inner
+    .header__left
+      .logo
+        .logo__box MI
+        .logo__text MUSIC.
+    .header__right
+      .header__nav
+        a(href="#", title="title") HOME
+        a(href="#", title="title") LIVE
+        a(href="#", title="title") ALBUMS
+        a(href="#", title="title").line-th NEWS
+        a(href="#", title="title") ABOUT
+
+      .header__socials
+        .socials
+          - let socials = ['facebook','twitter','instagram','youtube']
+          - each social in socials
+            a.socials__link(class=`socials__link_${social}` href="#", title=social)
+
+//END header
